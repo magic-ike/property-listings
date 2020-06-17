@@ -1,8 +1,8 @@
 <div class="jumbotron text-center">
     <div class="container">
       <h1>Property Listings</h1>
-      <p>Access the hottest properties available</p>
-      <a href=""><img src="assets/img/google.png"></a>
+      <p>Access the <b>hottest</b> properties available.</p>
+      <a *ngIf="!(afAuth.user | async)" (click)="login()" class="btn"><img src="assets/img/google.png"></a>
     </div>
   </div>
   
