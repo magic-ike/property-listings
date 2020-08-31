@@ -35,7 +35,7 @@ export class FirebaseService {
   addListing(listing) {
     // Create root ref
     const storageRef = firebase.storage().ref();
-    for (const selectedFile of [(document.getElementById('image').files[0])]) {
+    for (const selectedFile of [(document.getElementById('image') as HTMLInputElement).files[0]]) {
       const path = `/${this.folder}/${selectedFile.name}`;
       const iRef = storageRef.child(path);
       iRef.put(selectedFile).then((snapshot) => {

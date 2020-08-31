@@ -1,8 +1,11 @@
 <div class="jumbotron text-center">
-    <div class="container">
-      <h1>Property Listings</h1>
-      <p>Access the <b>hottest</b> properties available.</p>
-      <a *ngIf="!(afAuth.user | async)" (click)="login()" class="btn"><img src="assets/img/google.png"></a>
-    </div>
+  <div class="container">
+    <h1>Property Listings</h1>
+    <p>Access the <b>hottest</b> properties available.</p>
+    <div *ngIf="(afAuth.user | async); then true else button"></div>
+    <ng-template #button>
+      <a (click)="login()" class="btn"><img src="assets/img/google.png"></a>
+    </ng-template>
   </div>
+</div>
   
