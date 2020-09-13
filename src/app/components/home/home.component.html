@@ -4,8 +4,7 @@
     <p>Access the <b>hottest</b> properties available.</p>
     <div *ngIf="(afAuth.user | async); then true else button"></div>
     <ng-template #button>
-      <a (click)="login()" class="btn"><img src="assets/img/google.png"></a>
+      <a (click)="login()" class="btn"><img src="assets/img/google.png" height="60"></a>
     </ng-template>
   </div>
 </div>
-  
